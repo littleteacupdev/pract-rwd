@@ -1,0 +1,54 @@
+body {
+    background-color: lightblue; /* Default background color */
+    transition: background 0.3s;
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 599px) {
+    body {
+        background-color: lightgreen; /* Small screens */
+    }
+}
+
+/* For screens up to 600px (overlaps with previous, for demonstration) */
+@media (max-width: 600px) {
+    body {
+        background-color: #ffcccc; /* Slightly larger small screens */
+    }
+}
+
+/* For screens between 600px and 899px */
+@media (min-width: 600px) and (max-width: 899px) {
+    body {
+        background-color: lightpink; /* Medium screens */
+    }
+}
+
+/* For screens between 601px and 1024px (overlaps with previous, for demonstration) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: #ccffcc; /* Larger medium screens */
+    }
+}
+
+/* For screens 900px and above */
+@media (min-width: 900px) {
+    body {
+        background-color: cyan; /* Large screens */
+    }
+}
+
+/* For screens 1025px and above (overlaps with previous, for demonstration) */
+@media (min-width: 1025px) {
+    body {
+        background-color: #ccccff; /* Extra large screens */
+    }
+}
+
+/*
+Explanation:
+- The base style sets a default background color for all screens.
+- Each media query targets a specific range of viewport widths and changes the background color.
+- Some queries overlap for demonstration purposes, showing how CSS applies the last matching rule.
+- Comments above each query explain the targeted screen size.
+*/

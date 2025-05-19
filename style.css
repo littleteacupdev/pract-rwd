@@ -135,6 +135,28 @@ grid-row-start: 1;
 grid-row-end: span 2;
 }
 
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ccc;
+}
+.left-column, .right-column {
+    float: left;
+    width: 50%;
+}
+.left-column {
+    background-color: red;
+}
+.right-column {
+    background-color: blue;
+}
+@media (max-width: 600px) {
+    .left-column, .right-column {
+        width: 100%;
+        float: none;
+    }
+}
+
 /*
 Explanation:
 - The base style sets a default background color for all screens.

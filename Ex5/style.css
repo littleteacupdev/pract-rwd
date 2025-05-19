@@ -1,0 +1,26 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.photo {
+    flex-basis: calc(33% - 10px);
+    flex-grow: 1;
+    height: 200px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 1.5rem;
+}
+@media (max-width: 900px) {
+    .photo {
+        flex-basis: calc(50% - 10px);
+    }
+}
+@media (max-width: 600px) {
+    .photo {
+        flex-basis: 100%;
+    }
+}

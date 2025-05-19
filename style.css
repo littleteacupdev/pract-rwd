@@ -1,49 +1,96 @@
 body {
-    background-color: lightblue; /* Default background color */
+    background-color: lightblue;
+    /* Default background color */
     transition: background 0.3s;
 }
 
 /* For screens smaller than 600px */
 @media (max-width: 599px) {
     body {
-        background-color: lightgreen; /* Small screens */
+        background-color: lightgreen;
+        /* Small screens */
     }
 }
 
 /* For screens up to 600px (overlaps with previous, for demonstration) */
 @media (max-width: 600px) {
     body {
-        background-color: #ffcccc; /* Slightly larger small screens */
+        background-color: #ffcccc;
+        /* Slightly larger small screens */
     }
 }
 
 /* For screens between 600px and 899px */
 @media (min-width: 600px) and (max-width: 899px) {
     body {
-        background-color: lightpink; /* Medium screens */
+        background-color: lightpink;
+        /* Medium screens */
     }
 }
 
 /* For screens between 601px and 1024px (overlaps with previous, for demonstration) */
 @media (min-width: 601px) and (max-width: 1024px) {
     body {
-        background-color: #ccffcc; /* Larger medium screens */
+        background-color: #ccffcc;
+        /* Larger medium screens */
     }
 }
 
 /* For screens 900px and above */
 @media (min-width: 900px) {
     body {
-        background-color: cyan; /* Large screens */
+        background-color: cyan;
+        /* Large screens */
     }
 }
 
 /* For screens 1025px and above (overlaps with previous, for demonstration) */
 @media (min-width: 1025px) {
     body {
-        background-color: #ccccff; /* Extra large screens */
+        background-color: #ccccff;
+        /* Extra large screens */
     }
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: flex-start;
+    height: 200px;
+    width: 300px;
+    /* Fixed width smaller than 4 * 100px + gaps */
+    background-color: #ccffcc;
+    align-items: stretch;
+    /* Align items to stretch */
+    border: 2px dashed #888;
+    /* Visualize container */
+}
+
+.flex-item {
+    padding: 10px;
+    border: 1px solid black;
+    background: #fff;
+    flex-basis: 100px;
+    text-align: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+
+/* .flex-item:nth-child(2) {    
+    align-self: flex-end; /* Need apply height, Try other values like flex-start, flex-end *
+} */
+
+.flex-container {
+    flex-wrap: wrap;
+    /* Change to wrap or wrap-reverse */
+    /* Optional: combine with flex-direction for different effects */
+    flex-direction: row;
+    /* Try column, row-reverse, column-reverse */
+}
+
 
 /*
 Explanation:
